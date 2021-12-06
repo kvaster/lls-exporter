@@ -1,0 +1,12 @@
+device: /dev/ttySC0
+read_delay_sec: 1
+sensors:
+- name: generator
+  address: 1
+  levels:
+  - raw: 1
+    liters: 0
+  - raw: 1001
+    liters: 15
+  - raw: 4094
+    liters: 49
