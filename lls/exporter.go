@@ -6,7 +6,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"go.bug.st/serial"
-	"lls-exporter/log"
+	"lls_exporter/log"
 	"net/http"
 	"sort"
 	"time"

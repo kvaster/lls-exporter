@@ -1,4 +1,4 @@
-module lls-exporter
+module lls_exporter
 
 go 1.17
 

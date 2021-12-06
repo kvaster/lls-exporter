@@ -1,6 +1,6 @@
-# LLS-Exporter
+# LLS Exporter
 
-LLS-Exporter reads rs-485 data from serial port, decodes lls protocol and exports fuel level sensor data
+LLS Exporter reads rs-485 data from serial port, decodes lls protocol and exports fuel level sensor data
 as prometheus metrics.
 
 # License
