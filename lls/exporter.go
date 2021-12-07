@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-const promPrefix = "rs485_lls_fls_"
+const promPrefix = "lls_fls_"
 
 var stopError = errors.New("stop")
 
