@@ -10,8 +10,8 @@ var logFile = flag.String("log.file", "", "log file")
 var logLevel = flag.String("log.level", "", "log level")
 
 func init() {
-	_log.SetHandler(newColored(os.Stderr))
-	_log.SetLevel(_log.DebugLevel)
+	_log.SetHandler(newPlain(os.Stderr))
+	_log.SetLevel(_log.InfoLevel)
 }
 
 func ParseFlags() {
@@ -37,6 +37,7 @@ func ParseFlags() {
 
 type Interface = _log.Interface
 type Fields = _log.Fields
+
 var Log = _log.Log
 var WithFields = _log.WithFields
 var WithField = _log.WithField

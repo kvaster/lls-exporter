@@ -23,7 +23,7 @@ func main() {
 	}
 
 	var config lls.SensorsConfig
-	err = yaml.Unmarshal(data, &config)
+	err = yaml.UnmarshalStrict(data, &config)
 	if err != nil {
 		log.WithField("error", err).Fatal("error parsing config file")
 	}
