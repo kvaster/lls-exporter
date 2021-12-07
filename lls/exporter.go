@@ -245,7 +245,7 @@ func (e *Exporter) Serve(config SensorsConfig) error {
 				}
 
 				address := int(buf[1])
-				temp := int(buf[3])
+				temp := int8(buf[3])
 				rawLevel := int(buf[4]) | (int(buf[5]) << 8)
 
 				log.
