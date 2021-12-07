@@ -42,12 +42,14 @@ type SensorConfig struct {
 }
 
 type SensorsConfig struct {
+	Listen       string
 	Device       string
 	ReadDelaySec int
 	Sensors      []SensorConfig
 }
 
 func (s *SensorsConfig) UnmarshalYAML(unmarshal func(interface{}) error) error {
+	s.Listen = ":8080"
 	s.Device = "/dev/ttySC0"
 	s.ReadDelaySec = 1
 	type plain SensorsConfig
@@ -195,7 +197,7 @@ func (e *Exporter) Serve(config SensorsConfig) error {
 
 	var serveMux http.ServeMux
 	serveMux.Handle("/metrics", promhttp.Handler())
-	httpServer := http.Server{Addr: ":8080", Handler: &serveMux}
+	httpServer := http.Server{Addr: config.Listen, Handler: &serveMux}
 	go func() {
 		log.Info("http serve started")
 		defer log.Info("http serve stopped")
