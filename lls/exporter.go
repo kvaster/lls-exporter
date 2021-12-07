@@ -252,7 +252,7 @@ func (e *Exporter) Serve(config SensorsConfig) error {
 					WithField("address", address).
 					WithField("temp", temp).
 					WithField("level", rawLevel).
-					Info("data received")
+					Debug("data received")
 
 				if rawLevel < 0 || rawLevel > 4095 {
 					rawLevel = 0
