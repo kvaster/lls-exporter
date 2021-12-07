@@ -192,7 +192,7 @@ func (e *Exporter) Serve(config SensorsConfig) error {
 	}
 	port, err := serial.Open(config.Device, mode)
 	if err != nil {
-		return errors.New("error opening rs485 device")
+		return errors.New("error opening rs485/rs232 device")
 	}
 
 	var serveMux http.ServeMux
