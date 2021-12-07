@@ -36,15 +36,15 @@ type sensor struct {
 type SensorConfig struct {
 	Name    string
 	Address int
-	MinRaw  int
-	MaxRaw  int
+	MinRaw  int `yaml:"min_raw"`
+	MaxRaw  int `yaml:"max_raw"`
 	Levels  []sensorLevel
 }
 
 type SensorsConfig struct {
 	Listen       string
 	Device       string
-	ReadDelaySec int
+	ReadDelaySec int `yaml:"read_delay_sec"`
 	Sensors      []SensorConfig
 }
 
