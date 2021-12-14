@@ -3,6 +3,7 @@ module lls_exporter
 go 1.17
 
 require (
+	github.com/apex/log v1.9.0
 	github.com/kvaster/apexutils v0.0.3
 	github.com/prometheus/client_golang v1.11.0
 	go.bug.st/serial v1.3.3
@@ -10,7 +11,6 @@ require (
 )
 
 require (
-	github.com/apex/log v1.9.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
 	github.com/creack/goselect v0.1.2 // indirect
