@@ -2,10 +2,10 @@ package main
 
 import (
 	"flag"
+	"github.com/kvaster/apexutils/log"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"lls_exporter/lls"
-	"lls_exporter/log"
 	"os"
 	"os/signal"
 	"syscall"
