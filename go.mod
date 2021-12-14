@@ -3,7 +3,7 @@ module lls_exporter
 go 1.17
 
 require (
-	github.com/kvaster/apexutils v0.0.2
+	github.com/kvaster/apexutils v0.0.3
 	github.com/prometheus/client_golang v1.11.0
 	go.bug.st/serial v1.3.3
 	gopkg.in/yaml.v2 v2.3.0

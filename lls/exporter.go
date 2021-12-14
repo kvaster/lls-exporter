@@ -3,10 +3,10 @@ package lls
 import (
 	"context"
 	"errors"
+	"github.com/apex/log"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"go.bug.st/serial"
-	"lls_exporter/log"
 	"net/http"
 	"sort"
 	"time"

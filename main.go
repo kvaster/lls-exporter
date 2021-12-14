@@ -2,7 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/kvaster/apexutils/log"
+	"github.com/apex/log"
+	"github.com/kvaster/apexutils"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"lls_exporter/lls"
@@ -15,7 +16,7 @@ var configFile = flag.String("config", "/etc/lls-exporter/lls.yml", "config file
 
 func main() {
 	flag.Parse()
-	log.ParseFlags()
+	apexutils.ParseFlags()
 
 	data, err := ioutil.ReadFile(*configFile)
 	if err != nil {
